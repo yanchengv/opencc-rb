@@ -1,6 +1,7 @@
 # OpenCC [![Build Status](https://travis-ci.org/songjiz/opencc-rb.svg?branch=master)](https://travis-ci.org/songjiz/opencc-rb)
 
 ## Description
+此包是基于 `OpenCC` 实现简体和繁体可以互相转换
 
 This gem is for conversions between Traditional Chinese, Simplified Chinese and Japanese Kanji (Shinjitai). It's builded on [OpenCC](https://github.com/BYVoid/OpenCC).
 
@@ -45,7 +46,7 @@ sudo make install
 Then add this line to your application's Gemfile:
 
 ```ruby
-gem 'opencc-rb', git: 'https://github.com/songjiz/opencc-rb'
+gem 'opencc-rb', git: 'https://github.com/yanchengv/opencc-rb.git'
 ```
 
 And then execute:
@@ -67,9 +68,15 @@ require 'opencc'
 
 # Recommended.
 # The converter will automatically be closed when the block terminates.
+# 简体转繁体
 OpenCC.with(:s2t) do |ct|
   ct.convert('汉字') # => '漢字'
 end
+#繁体转简体
+OpenCC.with(:t2s) do |ct|
+  ct.convert('漢字') # => '汉字'
+end
+
 
 # Or
 converter = OpenCC[:s2t]
