@@ -1,7 +1,7 @@
 # OpenCC [![Build Status](https://travis-ci.org/songjiz/opencc-rb.svg?branch=master)](https://travis-ci.org/songjiz/opencc-rb)
 
 ## Description
-此包是基于 `OpenCC` 实现简体和繁体可以互相转换
+此包是基于 `OpenCC` 实现简体和繁体可以互相转换。
 
 This gem is for conversions between Traditional Chinese, Simplified Chinese and Japanese Kanji (Shinjitai). It's builded on [OpenCC](https://github.com/BYVoid/OpenCC).
 
